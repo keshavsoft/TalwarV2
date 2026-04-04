@@ -1,5 +1,6 @@
 import ADODB from 'node-adodb';
-const dataPath = "\\\\tally\\e\\talwar\\V1\\Data\\2026\\IAM.mdb";
+// const dataPath = "\\\\tally\\e\\talwar\\V1\\Data\\2026\\IAM.mdb";
+const dataPath = "Data/IAM.mdb";
 const tableName = "ImMast";
 
 const connection = ADODB.open(

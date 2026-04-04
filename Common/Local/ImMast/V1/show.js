@@ -13,4 +13,6 @@ const tableNames = reader.getTableNames();
 // Get data from a specific table
 const usersTable = reader.getTable(tableName);
 const data = usersTable.getData();
-console.log(data); // e.g., [{ id: 1, name: 'Alice' }, ...]
+const lastRecord = data.find(col => col.ImCode === data.length - 1);
+
+console.log("Data:",lastRecord,data); // e.g., [{ id: 1, name: 'Alice' }, ...]
