@@ -11,4 +11,6 @@ const tableNames = reader.getTableNames();
 // Get data from a specific table
 const usersTable = reader.getTable("PgMast");
 const data = usersTable.getData();
-console.log(data); // e.g., [{ id: 1, name: 'Alice' }, ...]
+const lastRecord = data.find(col => col.PgCode === data.length - 1);
+
+console.log("data:", data, "lastRecord", lastRecord); // e.g., [{ id: 1, name: 'Alice' }, ...]
