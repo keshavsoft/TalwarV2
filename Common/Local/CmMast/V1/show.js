@@ -13,7 +13,9 @@ const tableNames = reader.getTableNames();
 // Get data from a specific table
 const usersTable = reader.getTable(tableName);
 const data = usersTable.getData();
+const lastRecord = data.find(col => col.CmCode === data.length - 1);
+
 // const cFind = data.find(col => col.CmCode === 321);
 
 // console.log("columns",cFind, columns, columns.length - 1); // e.g., [{ id: 1, name: 'Alice' }, ...]
-console.log(data); // e.g., [{ id: 1, name: 'Alice' }, ...]
+console.log("data", data, "lastRecord", lastRecord); // e.g., [{ id: 1, name: 'Alice' }, ...]
