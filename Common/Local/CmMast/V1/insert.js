@@ -11,7 +11,7 @@ const connection = ADODB.open(
 
 async function run() {
     const res = await connection.execute(
-        `INSERT INTO ${tableName} (CmCode,CmName) VALUES (321,'a1')`
+        `INSERT INTO ${tableName} (CmCode,CmName) VALUES (322,'SRI')`
     );
 
     console.log(res);
